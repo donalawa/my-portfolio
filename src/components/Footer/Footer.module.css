@@ -33,7 +33,7 @@ h1 {
   .leftContainer {
     display: flex;
     /* background-color: red; */
-    width: 11%;
+    width: 13%;
     justify-content: space-between;
     /* background-color: orange; */
     height: 100%;
@@ -60,6 +60,9 @@ h1 {
     font-size: 14px;
     color: var(--primary);
     border-right: 0px;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
   }
   
   .social {

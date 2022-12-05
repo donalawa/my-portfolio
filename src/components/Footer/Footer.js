@@ -1,4 +1,5 @@
 import styles from './Footer.module.css';
+import { FaFacebook, FaTwitter, FaLinkedin, FaGithub} from 'react-icons/fa';
 
 export const Footer = () => {
     return (
@@ -13,17 +14,26 @@ export const Footer = () => {
                     <div className={styles.linksContainer}>
                         {/* Links */}
                         <div className={styles.link}>
-                            <a href="#">F</a>
+                            <a href="#">
+                                <FaLinkedin />
+                            </a>
                         </div>
                         <div className={styles.link}>
-                            <a href="#">T</a>
+                            <a href="#">
+                                <FaTwitter />
+                            </a>
+                        </div>
+                        <div className={styles.link}>
+                            <a href="#">
+                                <FaFacebook />
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div>
                 {/* RIGHT */}
                 <div className={styles.linkGithub}>
-                    <a href="#">@donalawa</a>
+                    <a href="#">@donalawa <FaGithub color='#fff'/></a>
                 </div>
             </div>
         </nav>
