@@ -1,0 +1,252 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+.content {
+    /* background-color: gray; */
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content .title {
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Fira Code', monospace;
+}
+
+.homeMain {
+    /* background-color: red; */
+    display: flex;
+    width: 65vw;
+    padding-top: 60px;
+}
+
+.homeMain .left {
+    /* background-color: green; */
+    flex: 1;
+    padding-top: 20px;
+}
+
+.hiText {
+    font-family: 'Fira Code', monospace;
+    color: #fff;
+}
+.left .name {
+    color: #fff;
+    font-family: 'Fira Code', monospace;
+    margin-top: 5px;
+    font-size: 44px;
+}
+
+.left .infoTitle::before {
+    content: '>';
+    margin-right: 5px;
+}
+
+.left .infoTitle {
+    font-size: 30px;
+    color: var(--primary);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-family: 'Fira Code', monospace;
+}
+
+.left .infoComment {
+    color: #607B96;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: 'Fira Code', monospace;
+
+}
+
+.left .varLink span {
+    margin-right: 10px;
+    font-family: 'Fira Code', monospace;
+
+}
+
+
+.homeMain .right {
+    /* background-color: orange; */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative
+}
+
+.homeMain .right .bgImage {
+    background-image: url('../../../public/images/Green.png');
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: -150px;
+    left: -200px
+}
+
+
+.right .gameContainer {
+    width: 100%;
+    height: 475px;
+    background: linear-gradient(150.26deg, rgba(58, 73, 164, 0.7) 1.7%, rgba(58, 73, 164, 0.7) 81.82%);
+    border: 1px solid #0C1616;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* GAME  */
+
+
+.gameContainer .top, .gameContainer .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gameContainer .top span, .gameContainer .bottom span {
+    background-color: #011221;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    font-size: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    width: 95%;
+    height: 94%;
+}
+/* SCREEN */
+.gameScreen {
+    width: 100%;
+    height: 220px;
+    background-color: #011221;
+    border-radius: 10px;
+}
+
+/* BUTTONS */
+
+.buttonStartContainer {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonStart {
+    background-color: #011627;
+    padding: 10px 15px;
+    border: 0px solid transparent;
+    color: #fff;
+    border-radius: 8px;
+    font-family: 'Fira Code', monospace;
+}
+
+.buttonSkip {
+    background-color: transparent;
+    padding: 10px 15px;
+    border: 0px solid transparent;
+    color: #fff;
+    border-radius: 8px;
+    font-family: 'Fira Code', monospace;
+    border:  1px solid #C98BDF;
+}
+
+.buttonSkip:hover , .buttonStart:hover {
+    cursor: pointer;
+}
+
+
+/* GAME PLAY INFO */
+.gameInfo  {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.gameInfoLeft {
+    /* background-color: red; */
+    width: 35%;
+}
+
+.gameInfoComment {
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Fira Code', monospace;
+}
+
+.foodsContainer {
+    margin-top: 30px;
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.foodsContainer .food {
+    width: 20px;
+    height: 20px;
+    /* background-color: blue; */
+    background-image: url('../../../public/images/food.png');
+    background-repeat: no-repeat;
+}
+
+
+.gameInfoRight {
+    /* background-color: green; */
+    width: 65%;
+    display: flex;
+    justify-content:flex-end;
+}
+
+.controlsContainer {
+    width: 60%;
+    /* background-color: orange; */
+    height: 142px;
+    background: rgba(1, 20, 35, 0.19);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.bottomComment {
+    color: #607B96;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: 'Fira Code', monospace;
+}
+
+/* buttons style */
+.buttonsContainer {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    padding-top: 15px;
+}
+
+.bottomControls {
+    display: flex;
+    column-gap: 5px;
+}
+
+
+.button {
+    background: #010C15;
+    border: 1px solid #1E2D3D;
+    width: 49.08px; 
+    height: 28.69px;
+    color: #fff;
+    border-radius: 8px;
+}

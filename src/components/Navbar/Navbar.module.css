@@ -1,0 +1,85 @@
+h1 {
+  color: var(--primary);
+}
+
+h4 {
+  font-size: 15px;
+  color: #607B96;
+  font-weight: 500;
+}
+
+.nav {
+  background-color: var(--secondary);
+  /* height: 30px; */
+  display: flex;
+  align-items: center;
+  /* padding: 14px 20px; */
+  justify-content: space-between;
+ 
+}
+
+
+
+.linksContainer {
+  display: flex;
+  justify-content: space-between;
+  /* width: 60%; */
+  /* background-color: red; */
+
+}
+
+.leftContainer {
+  display: flex;
+  /* background-color: red; */
+  width: 33%;
+  justify-content: space-between;
+  /* background-color: orange; */
+  height: 100%;
+}
+
+.link a{
+  color: #607B96;
+  text-decoration: none;
+  padding-bottom: 10px;
+  border-right: .5px solid #607B96;
+  border-left: .5px solid #607B96;
+  padding-right: 14px;
+  padding-left: 14px;
+  font-size: 14px;
+}
+
+.link  a.active {
+  color: #fff;
+  border-bottom: 2px  solid var(--primary);
+}
+
+.linkContact a {
+  text-decoration: none;
+  padding-bottom: 10px;
+  border-right: .5px solid #607B96;
+  border-left: .5px solid #607B96;
+  padding-left: 14px;
+  font-size: 14px;
+  color: #C98BDF !important;
+  border-right: 0px;
+}
+
+.nameContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+}
+
+
+@media screen and (max-width: 1300px) {
+  .leftContainer {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1065px) {
+  .leftContainer {
+    width: 50%;
+  }
+}
