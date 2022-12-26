@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+.project-card  {
+    border: 1px solid #1E2D3D;
+    /* padding: 10px; */
+    border-radius: 15px;
+    /* height: 300.82px; */
+}
+
+.project-image-container {
+    width: 100%;
+    position: relative;
+}
+
+.project-name {
+    color: #5565E8;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family: 'Fira Code', monospace;
+}
+
+.project-image {
+    width: 100%;
+}
+
+.language-icon {
+    height: 28px;
+    width: 28px;
+    /* background-color: red; */
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    right:15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-info {
+    padding: 30px;
+}
+
+.project-description {
+    margin-bottom: 30px;
+    color: #607B96;
+}
+
+.open-project-button {
+    /* padding: 10px, 14px, 10px, 14px; */
+    background-color: #1C2B3A;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+}

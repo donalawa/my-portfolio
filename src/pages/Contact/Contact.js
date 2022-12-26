@@ -1,9 +1,9 @@
 import React from 'react';
 import FolderParent from '../../components/FolderParent/FolderParent';
 import IconFolder from '../../components/IconFolder/IconFolder';
-import './About.css'
+import './Contact.css'
 
-function About(props) {
+function Contact(props) {
     return (
         <div className="about-container">
             <div className="sm-bar">
@@ -46,4 +46,4 @@ function About(props) {
     );
 }
 
-export default About;
+export default Contact;

@@ -1,0 +1,16 @@
+
+
+
+.language-icons-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.language-name {
+    color: #607B96;
+}
+.language-name.active {
+    color: #FFFFFF;
+}

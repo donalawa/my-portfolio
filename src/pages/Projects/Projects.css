@@ -27,6 +27,7 @@
     border-left: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
     /* padding-left: 10px; */
+    overflow: scroll;
 }
 
 .sm-right .box {
@@ -131,6 +132,13 @@
 }
 /*  */
 
+.project-cards {
+    padding: 20px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340.35px, 1fr)); 
+    grid-gap: 1em;
+
+}
 
 /* MEDIA QUERIES */
 
@@ -143,7 +151,7 @@
         /* background-color: red; */
         display: grid;
         grid-template-columns: 25vw auto 20px;
-        height: 98vh;
+        /* height: 98vh; */
         font-family: 'Fira Code', monospace;
     }
     

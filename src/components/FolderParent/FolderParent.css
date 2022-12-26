@@ -1,0 +1,53 @@
+
+
+.folder-top-bar {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-left: 10px; */
+    /* padding-right: 8px; */
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+.main-folder-container {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    /* background-color: #1E2D3D; */
+    padding-right: 8px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.main-folder-name  {
+    color: #fff;
+}
+
+.hide-folders {
+    display: none;
+}
+
+
+@media screen and (max-width: 728px) {
+
+.main-folder-container {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: #1E2D3D;
+    padding-right: 8px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.folder-top-bar {
+    border: none  !important;
+}
+
+}
