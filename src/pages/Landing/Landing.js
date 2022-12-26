@@ -1,6 +1,6 @@
 import styles from './Landing.module.css';
 
-export const Landing = () => {
+const Landing = () => {
     return (
         <>
            <div className={styles.content}>
@@ -87,3 +87,6 @@ export const Landing = () => {
         </> 
     )
 }
+
+
+export default Landing;

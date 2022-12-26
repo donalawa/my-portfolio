@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./Navbar.module.css"
+import { NavLink } from "react-router-dom";
 
-export const Navbar = () => {
+export const Navbar = ({pageName}) => {
   return (
     <>
       <nav className={styles.nav}>
@@ -14,20 +15,20 @@ export const Navbar = () => {
             <div className={styles.linksContainer}>
               {/* Links */}
               <div className={styles.link}>
-                <a href="#" className={styles.active}>hello()</a>
+                <NavLink to="/" className={`${pageName == 'home' && styles.active}`}>hello()</NavLink>
               </div>
               <div className={styles.link}>
-                <a href="#">about-me()</a>
+                <NavLink to="/about" className={`${pageName == 'about' && styles.active}`}>about-me()</NavLink>
               </div>
               <div className={styles.link}>
-                <a href="#">projects()</a>
+                <NavLink to="/projects"  className={`${pageName == 'projects' && styles.active}`}>projects()</NavLink>
               </div>
             </div>
         </div>
         <div>
           {/* RIGHT */}
           <div className={styles.linkContact}>
-                <a href="#">contact-me()</a>
+                <NavLink to="/contact" className={`${pageName == 'contact' && styles.active}`}>contact-me()</NavLink>
           </div>
         </div>
       </nav>

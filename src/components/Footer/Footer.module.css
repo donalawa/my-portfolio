@@ -16,6 +16,8 @@ h1 {
     /* padding: 14px 20px; */
     justify-content: space-between;
     /* background-color: red; */
+    padding-left: 20px;
+    padding-right: 20px;
 
   }
   
@@ -70,4 +72,10 @@ h1 {
     justify-content: center;
     align-items: center;
     /* background-color: red; */
+  }
+
+  @media screen and (max-width: 728px) {
+    .nav {
+      display: none !important;
+    }
   }

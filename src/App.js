@@ -1,23 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-import { Navbar } from "./components/Navbar/Navbar";
-import { Footer } from "./components/Footer/Footer";
-import { Landing } from './components/Landing/Landing';
+import { BrowserRouter, Routes,  Route } from 'react-router-dom';
+import { Landing, About } from './pages/index';
+import PageContainer from './components/PageContainer/PageContainer';
 
 function App() {
   return (
     <div className="App">
-        <div className="main-content">
-        <div className="top">
-          <Footer />
-          <div className="main-info">
-              <Landing />
-          </div>
-        </div>
-        <div className="bottom">
-          <Navbar />
-        </div>
-      </div>
+      <BrowserRouter>
+          <Routes>
+            <Route path="/" element={(<PageContainer name="home"><Landing /> </PageContainer>)}/>
+            <Route path="/about" element={(<PageContainer name="about"><About /> </PageContainer>)}/>
+          </Routes>
+      </BrowserRouter>
     </div>
   );
 }

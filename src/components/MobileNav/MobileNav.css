@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+.mobile-nav {
+    position: absolute;
+    width: 89%;
+    display: none;
+}
+
+
+.nav-close {
+    display: none;
+}
+
+.mobile-nav.open  {
+    height: 82%;
+
+}
+
+.mobile-nav.open .nav-close {
+    display: block;
+}
+
+.mobile-nav.open .nav-open {
+    display: none;
+}
+
+.mobile-nav-content {
+    display: none;
+}
+
+.mobile-nav.open .mobile-nav-content {
+    display: block;
+    
+}
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px  solid #1E2D3D;
+    padding-bottom: 20px;
+    /* width: 100%; */
+}
+
+.mobile-name {
+    color: #607B96;
+    font-size: 16px;
+    font-family: 'Fira Code', monospace;
+}
+
+.nav-open {
+    width: 25px;
+    height: 20px;
+}
+
+.nav-close {
+    width: 20px;
+    height: 20px;
+}
+.mobile-nav.open .nav-open {
+    display: none;
+}
+
+
+.mobile-nav-content  {
+    background-color: #0D1117;
+    height: 100%;
+    position: relative;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.mobile-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* background-color: red; */
+    height: 50px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border-top: 1px  solid  #1E2D3D;
+    /* padding-left: 20px; */
+    /* padding-right: 20px;  */
+}
+
+.social-link {
+    color: #5565E8;
+    padding: 0 15px;
+    font-family: 'Fira Code', monospace;
+}
+
+
+.mobile-link {
+    padding: 20px 15px;
+    border-bottom: 1px  solid  #1E2D3D;
+}
+
+.mobile-link .link  {
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Fira Code', monospace;
+    text-decoration: none;
+}
+
+.mobile-link .link:hover  {
+    color: #5565E8;
+}
+
+.mobile-nav-icons {
+    display: flex;
+    /* gap: 12px; */
+    /* margin-right: 15px; */
+}
+
+.mobile-nav-icon {
+    border-left: 2px solid #1E2D3D;
+    padding: 0px 15px;
+    height:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.nav-button {
+    background: transparent;
+    border: none;
+}
+
+@media screen and (max-width: 728px) {
+    .mobile-nav {
+      display: block !important;
+    }
+  }

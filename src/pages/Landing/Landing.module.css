@@ -20,6 +20,7 @@
     display: flex;
     width: 65vw;
     padding-top: 60px;
+    word-break: break-all;
 }
 
 .homeMain .left {
@@ -249,4 +250,36 @@
     height: 28.69px;
     color: #fff;
     border-radius: 8px;
+}
+
+
+@media screen and (max-width: 1250px) {
+    .right {
+        display: none !important;
+    }
+
+    .homeMain .left {
+        margin-top: 4vh !important;
+    }
+
+    .content .title {
+        margin-top: 4vh  !important;
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+    .left .name {
+        font-size: 32px;
+    }
+
+    .hiText {
+        font-family: 'Fira Code', monospace;
+        color: #fff;
+    }
+
+    .infoTitle {
+        font-size: 22px !important;
+    }
+
 }

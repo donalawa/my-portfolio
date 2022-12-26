@@ -1,0 +1,19 @@
+
+.folder-container {
+    margin-bottom: 12px;
+}
+
+
+.folder-info {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.folder-files {
+    margin-top: 10px;
+}
+
+.hide-files  {
+    display: none;
+}
