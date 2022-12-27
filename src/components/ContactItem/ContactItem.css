@@ -1,0 +1,19 @@
+
+.contact-right p {
+    line-height: 27px;
+}
+.contact-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 5px;
+}
+
+.item-text {
+    color: #607B96;
+}
+
+.item-text:hover {
+    color: #fff;
+    cursor: pointer;
+}

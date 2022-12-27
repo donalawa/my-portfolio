@@ -34,7 +34,7 @@ function Projects(props) {
                     </div>
                 </div>
                <div className="project-cards">
-                    <ProjectCard iconBg="'#86E1F9'" icon={require('../../images/projects/react-i.png')} image={require('../../images/projects/p1.png')}/>
+                    <ProjectCard iconBg="#86E1F9" icon={require('../../images/projects/react-i.png')} image={require('../../images/projects/p1.png')}/>
                     <ProjectCard iconBg="#81D4AF" icon={require('../../images/projects/vue-i.png')} image={require('../../images/projects/p2.png')}/>
                     <ProjectCard iconBg="#86E1F9" icon={require('../../images/projects/react-i.png')} image={require('../../images/projects/p3.png')}/>
                </div>

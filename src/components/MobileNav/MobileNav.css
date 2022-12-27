@@ -4,7 +4,9 @@
     position: absolute;
     width: 89%;
     display: none;
+    
 }
+
 
 
 .nav-close {
@@ -13,6 +15,7 @@
 
 .mobile-nav.open  {
     height: 82%;
+
 
 }
 
@@ -67,6 +70,7 @@
     position: relative;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+    z-index: 1000;
 }
 
 .mobile-footer {

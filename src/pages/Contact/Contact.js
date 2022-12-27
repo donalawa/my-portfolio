@@ -1,6 +1,8 @@
 import React from 'react';
 import FolderParent from '../../components/FolderParent/FolderParent';
 import IconFolder from '../../components/IconFolder/IconFolder';
+import ContactItem from '../../components/ContactItem/ContactItem';
+import TextInput from '../../components/TextInput/TextInput';
 import './Contact.css'
 
 function Contact(props) {
@@ -13,14 +15,15 @@ function Contact(props) {
                 <img style={{ width: '16px'}} src={require('../../images/icons/side-icon3.png')}/>
             </div>
             <div className="folders-bar">
-                <FolderParent text="personal-info">
-                    <IconFolder icon={require('../../images/icons/folder1.png')} text="bio"/>
-                    <IconFolder icon={require('../../images/icons/folder2.png')} text="Interests"/>
-                    <IconFolder icon={require('../../images/icons/folder3.png')} text="education" files={[{name: 'high-school',  content: "Hello World"}, {name: 'university',  content: "Hello World"}]} />
+                <FolderParent text="personal-info" open={true}>
+                    <ContactItem type="email" text="awadonacien12@gmail.com"/>
+                    <ContactItem type="phone" text="+237 651346786"/>
                 </FolderParent>
-                <FolderParent text="professional-info"/>
-                <FolderParent text="hobbies"/>
-                <FolderParent text="contacts"/>
+                <FolderParent text="professional-info" open={true}>
+                    <ContactItem type="link" text="Github"/>
+                    <ContactItem type="link" text="Twitter"/>
+                    <ContactItem type="link" text="LinkedIn"/>
+                </FolderParent>
             </div>
             <div className="main-sec">
                 {/* Main sec */}
@@ -30,13 +33,80 @@ function Contact(props) {
                         <img style={{ width: '10px',  height:  '10px'}} src={require('../../images/icons/close.png')}/>
                     </div>
                 </div>
-                <p className="file-name-mobile">// personal-info</p>
-                <p className="content-text">I have 5 years of experience in web development lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat officia deserunt mollit anim id est laborum. quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat officia deserunt mollit anim id est laborum.
-                </p>
-      
+               
+                <div className="main-contact">
+                    <div className="contact-left">
+                        <TextInput placeholder="Enter name" label="_name:" />
+                        <TextInput placeholder="Enter email" label="_email:"/>
+                    </div>
+                    <div className="contact-right">
+                        <p>
+                            <span className="line-number">1 </span>
+                            <span className="data-type">const </span>
+                            <span className="var-name">button </span>
+                            <span className="operator">= </span>
+                            <span className="methods">document.querySelector<span className="brace">(<span className="value">'#sendBtn'</span><span className="brace">);</span></span></span>
+                        </p>
+                        <p>
+                            <span className="line-number">2 </span>
+                        </p>
+                        <p>
+                            <span className="line-number">3 </span>
+                            <span className="data-type">const </span>
+                            <span className="var-name">message </span>
+                            <span className="operator">= </span>
+                            <span className="brace">{`${'{'}`}</span>
+                        </p>
+                        <p>
+                            <span className="line-number">4 </span>
+                            <span className="var-name">&nbsp;name<span className="brace">: </span></span>
+                            <span className="value">"Awa Donacien"</span>
+                            <span className="brace">,</span>
+                        </p>
+                        <p>
+                            <span className="line-number">5 </span>
+                            <span className="var-name">&nbsp;email<span className="brace">: </span></span>
+                            <span className="value">"awadonalcien12@gmail.com"</span>
+                            <span className="brace">,</span>
+                        </p>
+                        <p>
+                            <span className="line-number">6 </span>
+                            <span className="var-name">&nbsp;message<span className="brace">: </span></span>
+                            <span className="value">"Hey! Just checked your website and it looks awesome! Also, I checked your articled on Medium."</span>
+                            <span className="brace">,</span>
+                        </p>
+
+                        <p>
+                            <span className="line-number">7 </span>
+                            <span className="var-name">&nbsp;date<span className="brace">: </span></span>
+                            <span className="value">"Tue 26 Dec"</span>
+                            <span className="brace">,</span>
+                        </p>
+                        <p>
+                            <span className="line-number">9 &nbsp;&nbsp;</span>
+
+                            <span className="brace">{`${'}'}`}</span>
+                        </p>
+                        <br/>
+                        <p>
+                            <span className="line-number">10 </span>
+                            <span className="methods">button.addEventListener<span className="brace">(<span className="value">'click'</span><span className="brace">,</span></span></span>
+                            <span className="brace"> ()</span>
+                            <span className="data-type">{`${' => '}`}</span>
+                            <span className="brace">{`${'{'}`}</span>
+                        </p>
+                        <p>
+                            <span className="line-number">11 &nbsp;&nbsp;</span>
+
+                            <span className="methods">form.send<span className="brace">(<span className="methods">message</span><span className="brace">);</span></span></span>
+                        </p>
+                        <p>
+                            <span className="line-number">12 &nbsp;</span>
+
+                            <span className="brace">{`${'});'}`}</span>
+                        </p>
+                    </div>
+                </div>
             </div>
             <div className="sm-right">
                 {/* ssmall ride */}

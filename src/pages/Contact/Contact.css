@@ -132,6 +132,46 @@
 /*  */
 
 
+.main-contact  {
+    display: grid;
+    grid-template-columns: 45% 1fr;
+}
+
+.contact-left {
+    /* background-color: rebeccapurple; */
+    padding: 60px 40px;
+}
+
+.contact-right {
+    /* background-color: orange; */
+    padding: 60px 40px;
+}
+
+.data-type, .operator {
+    color: #C98BDF;
+}
+
+.var-name {
+    color: #5565E8;
+}
+
+.methods {
+    color: #5565E8;
+}
+
+.brace {
+    color: #607B96;
+}
+
+.value {
+    color:  #FEA55F;
+}
+
+.line-number {
+    color: #607B96;
+}
+
+
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 942px) {
