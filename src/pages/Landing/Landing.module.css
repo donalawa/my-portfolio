@@ -271,6 +271,15 @@
 
 
 @media screen and (max-width: 575px) {
+    .homeMain {
+        /* background-color: red; */
+        display: flex;
+        width: 85vw;
+        padding-top: 60px;
+        word-break: break-all;
+        gap: 40px;
+    }
+
     .left .name {
         font-size: 32px;
     }
