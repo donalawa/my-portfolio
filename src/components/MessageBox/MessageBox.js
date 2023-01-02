@@ -6,7 +6,7 @@ function MessageBox({ value, inputChange }) {
     return (
         <div className="box-container">
             <p className="label-text">_messsage:</p>
-            <textarea value={value} onChange={inputChange} placeholder="Enter message" className="message-box" rows="14" cols="50"></textarea>
+            <textarea value={value} onChange={inputChange} placeholder="Enter message" className="message-box" rows="12" cols="50"></textarea>
         </div>
     );
 }
