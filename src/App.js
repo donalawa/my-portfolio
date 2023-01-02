@@ -12,13 +12,17 @@ import { actionCreators } from './state';
 
 import { fetchProjects, fetchContactInfo, fetchAboutInfo} from './services';
 
+import HashLoader from "react-spinners/HashLoader";
+
 function App() {
   const [navOpen, setNavOpen] = useState(false);
   const dispatch = useDispatch();
 
   let  { setAllProjects,  setContactInfo, setActiveFile, setAboutInfo, setHobbies} = bindActionCreators(actionCreators, dispatch);
+  const [loading, setLoading] = useState(false);
 
   const getProjects = () => {
+    setLoading(true)
     const allProjects = [];
     
     // console.log('GET PROJECTS BELOW');
@@ -54,6 +58,7 @@ function App() {
   }
 
   const getAboutInfo = () => {
+    
     // FETCH  ABOUT FILES HERE
     const allFiles = [];
     
@@ -68,6 +73,7 @@ function App() {
     setActiveFile(allFiles[0]?.aboutInfo[0]?.files[0]);
     setAboutInfo(allFiles[0]?.aboutInfo);
     setHobbies(allFiles[0]?.hobbies);
+    setLoading(false);
     }).catch(err => {
       console.log('Error', err);
     })
@@ -79,6 +85,7 @@ function App() {
     // setActiveFile(allFiles[0]?.aboutInfo[0]?.files[0]);
   }
 
+
   useEffect(() => {
     getProjects();
     getContactInfo();
@@ -86,14 +93,22 @@ function App() {
   },[])
   return (
     <div className="App">
-      <BrowserRouter>
+    {loading &&  <HashLoader
+        color="#4D5BCE"
+        loading={true}
+        cssOverride={{}}
+        size={150}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      /> }
+     {!loading && <BrowserRouter>
           <Routes>
             <Route path="/" element={(<NavContext.Provider value={{navOpen, setNavOpen}}> <PageContainer name="home"><Landing /> </PageContainer></NavContext.Provider>)} />
             <Route path="/about" element={(<NavContext.Provider value={{navOpen, setNavOpen}}>  <PageContainer name="about"><About /> </PageContainer></NavContext.Provider>)}/>
             <Route path="/contact" element={(<NavContext.Provider value={{navOpen, setNavOpen}}> <PageContainer name="contact"><Contact /> </PageContainer></NavContext.Provider>)}/>
             <Route path="/projects" element={(<NavContext.Provider value={{navOpen, setNavOpen}}> <PageContainer name="projects"><Projects /> </PageContainer></NavContext.Provider>)}/>
           </Routes>
-      </BrowserRouter>
+      </BrowserRouter>}
     </div>
   );
 }
