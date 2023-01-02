@@ -1,18 +1,19 @@
-import React, { useState  } from 'react';
+import React, { useState, useContext  } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaTwitter, FaLinkedin, FaGithub} from 'react-icons/fa';
-
+import NavContext from '../../context/NavContext';
 
 import './MobileNav.css';
 
 function MobileNav(props) {
-    const [isNavOpen, setIsNavOpen] = useState(false)
+    const {navOpen, setNavOpen} = useContext(NavContext);
+
     const toggleNav = () => {
-        setIsNavOpen(!isNavOpen);
+        setNavOpen(!navOpen);
     }
 
     return (
-        <div className={`mobile-nav ${isNavOpen ? 'open' : ''}`}>
+        <div className={`mobile-nav ${navOpen ? 'open' : ''}`}>
             <div className="top-nav">
                 <div>
                     <p className="mobile-name">Awa Donacien()</p>

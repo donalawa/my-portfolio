@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import FolderParent from '../../components/FolderParent/FolderParent';
 import IconFolder from '../../components/IconFolder/IconFolder';
 import ContactItem from '../../components/ContactItem/ContactItem';
@@ -6,8 +6,15 @@ import TextInput from '../../components/TextInput/TextInput';
 import MessageBox from '../../components/MessageBox/MessageBox';
 import Button from '../../components/Button/Button';
 import './Contact.css'
+import NavContext from '../../context/NavContext';
 
 function Contact(props) {
+    const {navOpen, setNavOpen} = useContext(NavContext);
+    
+    useEffect(() => {
+        setNavOpen(false);
+    }, [])
+    
     return (
         <div className="about-container">
             <div className="sm-bar">

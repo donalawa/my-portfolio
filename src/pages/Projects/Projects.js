@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {useEffect, useContext} from 'react';
 import FolderParent from '../../components/FolderParent/FolderParent';
 import IconFolder from '../../components/IconFolder/IconFolder';
 import LanguageIcon from '../../components/LanguageIcon/LanguageIcon';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import './Projects.css'
+import NavContext from '../../context/NavContext';
 
 function Projects(props) {
+    const {navOpen, setNavOpen} = useContext(NavContext);
+    
+    useEffect(() => {
+        setNavOpen(false);
+    }, [])
     return (
         <div className="about-container">
             <div className="sm-bar">

@@ -1,6 +1,13 @@
 import styles from './Landing.module.css';
+import { useContext, useEffect } from 'react';
+import NavContext from '../../context/NavContext';
 
 const Landing = () => {
+    const {navOpen, setNavOpen} = useContext(NavContext);
+    
+    useEffect(() => {
+        setNavOpen(false);
+    }, [])
     return (
         <>
            <div className={styles.content}>

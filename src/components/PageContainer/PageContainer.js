@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { Navbar } from '../Navbar/Navbar';
 import { Footer } from '../Footer/Footer';
 import MobileNav from '../MobileNav/MobileNav';
-
 import './PageContainer.css';
 
 
 function PageContainer({ children, name }) {
+
     return (
         <div>
             <div className="main-content">
