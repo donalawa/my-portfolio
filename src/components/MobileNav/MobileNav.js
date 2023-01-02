@@ -24,18 +24,26 @@ function MobileNav(props) {
                 </button>
             </div>
             <div className="mobile-nav-content">
+                <Link to="/">
                 <div className="mobile-link">
-                    <Link to="/" className="link">_hello</Link>
+                    <span className="link">_hello</span>
                 </div>
+                </Link>
+                <Link to="/about">
                 <div className="mobile-link">
-                    <Link to="/about" className="link">_about-me</Link>
+                    <span className="link">_about-me</span>
                 </div>
+                </Link>
+                <Link to="/projects">
                 <div className="mobile-link">
-                    <Link to="/projects" className="link">_projects</Link>
+                    <span className="link">_projects</span>
                 </div>
+                </Link>
+                <Link to="/contact">
                 <div className="mobile-link">
-                    <Link to="/contact" className="link">_contact-me</Link>
+                    <span className="link">_contact-me</span>
                 </div>
+                </Link>
                 <div className="mobile-footer">
                     <p className="social-link">Social: </p>
                     <div  className="mobile-nav-icons">
