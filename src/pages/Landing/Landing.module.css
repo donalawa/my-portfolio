@@ -293,4 +293,8 @@
         font-size: 22px !important;
     }
 
+    .content {
+        padding-top: 30px;
+    }
+
 }
