@@ -2,7 +2,8 @@
 
 .mobile-nav {
     position: absolute;
-    width: 89%;
+    /* width: 89%; */
+    width: 100%;
     display: none;
     
 }
