@@ -21,6 +21,8 @@
 
 .project-image {
     width: 100%;
+    height: 250px;
+    /* object-fit: contain; */
 }
 
 .language-icon {
@@ -37,7 +39,7 @@
 }
 
 .project-info {
-    padding: 30px;
+    padding: 20px 30px;
 }
 
 .project-description {
@@ -53,4 +55,15 @@
     border-radius: 8px;
     color: #fff;
     font-size: 14px;
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    color: #5565E8;
 }

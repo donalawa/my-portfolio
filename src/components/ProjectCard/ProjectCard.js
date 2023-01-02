@@ -13,6 +13,12 @@ function ProjectCard({ image, icon, iconBg="#86E1F9" }) {
                     </div>
                 </div>
                 <div className="project-info">
+                    <div className="tags">
+                        <span className='tag'>#html</span>
+                        <span className='tag'>#css</span>
+                        <span className='tag'>#javascript</span>
+                        <span className='tag'>#node</span>
+                    </div>
                     <p className="project-description">Duis aute irure dolor in velit esse cillum dolore.</p>
                     <a className="open-project-button" href="#">View Project</a>
                 </div>
