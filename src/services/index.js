@@ -22,8 +22,18 @@ const fetchContactInfo = () => {
     }
 }
 
+const fetchAboutInfo = () => {
+    try {
+        return getDocs(collection(db, 'about'));
+    } catch (error) {
+        console.log("Error getting data");
+        console.log(error);
+    }
+}
+
 
 export {
     fetchProjects,
-    fetchContactInfo
+    fetchContactInfo,
+    fetchAboutInfo
 }

@@ -1,9 +1,22 @@
 import React, { useState } from 'react';
 import  './IconFolder.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-function IconFolder({icon, text, files}) {
-    const [isOpen, setIsOpen] = useState(false);
+import { actionCreators } from '../../state';
 
+function IconFolder({icon, text, files, open=false}) {
+    const [isOpen, setIsOpen] = useState(open);
+    const dispatch = useDispatch();
+
+    let  { setActiveFile } = bindActionCreators(actionCreators, dispatch);
+
+
+    const makeFileActive = (file) => {
+        console.log('SET FILE');
+        console.log(file);
+        setActiveFile(file);
+    }
     const toggleOpen = () => {
         setIsOpen(!isOpen);
     }
@@ -17,7 +30,7 @@ function IconFolder({icon, text, files}) {
             </div>
             <div className={`folder-files ${!isOpen && 'hide-files'}`}>
                {files && files.map((file,index) => (
-                <div className="folder-file-info">
+                <div className="folder-file-info" key={index} onClick={() => makeFileActive(file)}>
                     <div>&nbsp;</div>
                     <img style={{height: '12px', width: '13px'}} src={require('../../images/icons/file.png')} />
                     <p  className="folder-file-name">{file.name}</p>

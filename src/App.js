@@ -10,13 +10,13 @@ import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from './state';
 
-import { fetchProjects, fetchContactInfo } from './services';
+import { fetchProjects, fetchContactInfo, fetchAboutInfo} from './services';
 
 function App() {
   const [navOpen, setNavOpen] = useState(false);
   const dispatch = useDispatch();
 
-  let  { setAllProjects,  setContactInfo} = bindActionCreators(actionCreators, dispatch);
+  let  { setAllProjects,  setContactInfo, setActiveFile, setAboutInfo, setHobbies} = bindActionCreators(actionCreators, dispatch);
 
   const getProjects = () => {
     const allProjects = [];
@@ -53,9 +53,36 @@ function App() {
     })
   }
 
+  const getAboutInfo = () => {
+    // FETCH  ABOUT FILES HERE
+    const allFiles = [];
+    
+    // console.log('GET PROJECTS BELOW');
+    fetchAboutInfo().then(res => {
+      res.forEach(doc => {
+        allFiles.push(doc.data());
+      })
+
+      // console.log('ALL Files',  allFiles[0]?.hobbies)
+      // console.log(allFiles[0]?.aboutInfo)
+    setActiveFile(allFiles[0]?.aboutInfo[0]?.files[0]);
+    setAboutInfo(allFiles[0]?.aboutInfo);
+    setHobbies(allFiles[0]?.hobbies);
+    }).catch(err => {
+      console.log('Error', err);
+    })
+
+    // SET ABOUT  INFO AS ACTIVE FILE
+    // console.log(allFiles[0]?.aboutInfo)
+
+    // SET OTHER FILES
+    // setActiveFile(allFiles[0]?.aboutInfo[0]?.files[0]);
+  }
+
   useEffect(() => {
     getProjects();
     getContactInfo();
+    getAboutInfo();
   },[])
   return (
     <div className="App">
