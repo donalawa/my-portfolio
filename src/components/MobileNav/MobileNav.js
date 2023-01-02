@@ -1,17 +1,30 @@
-import React, { useState, useContext  } from 'react';
+import React, { useState, useContext, useEffect  } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaTwitter, FaLinkedin, FaGithub} from 'react-icons/fa';
 import NavContext from '../../context/NavContext';
+import { AiFillGithub  } from  'react-icons/ai';
+import { useSelector } from 'react-redux';
 
 import './MobileNav.css';
 
 function MobileNav(props) {
     const {navOpen, setNavOpen} = useContext(NavContext);
+    const state = useSelector(state  => state.contact);
+    const [contact, setContact] = useState();
 
     const toggleNav = () => {
         setNavOpen(!navOpen);
     }
 
+
+    useEffect(() => {
+        // console.log('IN Home', state)
+        // setContact(state.contactInfo);
+        // console.log('contact', contact)
+        setContact(state.contactInfo)
+    }, [state])
+
+    
     return (
         <div className={`mobile-nav ${navOpen ? 'open' : ''}`}>
             <div className="top-nav">
@@ -48,13 +61,19 @@ function MobileNav(props) {
                     <p className="social-link">Social: </p>
                     <div  className="mobile-nav-icons">
                         <div className="mobile-nav-icon">
+                        <a href={contact?.social?.twitter} target="_blank">
                             <FaTwitter size={20} color="#607B96"/>
+                        </a>
                         </div>
                         <div className="mobile-nav-icon">
-                            <FaFacebook size={20} color="#607B96"/>
+                         <a href={contact?.social?.github} target="_blank">
+                                <AiFillGithub size={20} color="#607B96" />
+                            </a>
                         </div>
                         <div className="mobile-nav-icon">
+                        <a href={contact?.social?.linkedin} target="_blank">
                             <FaLinkedin size={20} color="#607B96"/>
+                        </a>
                         </div>
                     </div>
                 </div>

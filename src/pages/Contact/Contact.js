@@ -39,7 +39,7 @@ function Contact(props) {
     }, [])
 
     useEffect(() => {
-        console.log('IN Contact', state)
+        // console.log('IN Contact', state)
         // setContact(state.contactInfo);
         // console.log('contact', contact)
         setContact(state.contactInfo)

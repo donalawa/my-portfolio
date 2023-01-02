@@ -10,7 +10,7 @@ export const Footer = () => {
 
 
     useEffect(() => {
-        console.log('IN Footer', state)
+        // console.log('IN Footer', state)
         // setContact(state.contactInfo);
         // console.log('contact', contact)
         setContact(state.contactInfo)

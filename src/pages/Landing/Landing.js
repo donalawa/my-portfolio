@@ -14,7 +14,7 @@ const Landing = () => {
     },[]);
 
     useEffect(() => {
-        console.log('IN Home', state)
+        // console.log('IN Home', state)
         // setContact(state.contactInfo);
         // console.log('contact', contact)
         setContact(state.contactInfo)
@@ -35,7 +35,7 @@ const Landing = () => {
                             <span style={{color: '#4D5BCE'}}>const</span>
                             <span style={{color: '#43D9AD'}}>githubLink</span>
                             <span style={{color: '#fff'}}>=</span>
-                            <span style={{color: '#C98BDF'}}>“https://github.com/donalawa”</span>
+                            <a href="https://github.com/donalawa" target="_blank" style={{color: '#C98BDF',  fontSize:  '19px',  textDecoration: 'none'}}>“https://github.com/donalawa”</a>
                         </a>
                     </div>
                     <div className={styles.right}>
