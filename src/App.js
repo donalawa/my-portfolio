@@ -10,24 +10,24 @@ import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from './state';
 
-import { fetchProjects } from './services';
+import { fetchProjects, fetchContactInfo } from './services';
 
 function App() {
   const [navOpen, setNavOpen] = useState(false);
   const dispatch = useDispatch();
 
-  let  { setAllProjects } = bindActionCreators(actionCreators, dispatch);
+  let  { setAllProjects,  setContactInfo} = bindActionCreators(actionCreators, dispatch);
 
   const getProjects = () => {
     const allProjects = [];
     
-    console.log('GET PROJECTS BELOW');
+    // console.log('GET PROJECTS BELOW');
     fetchProjects().then(res => {
       res.forEach(doc => {
         allProjects.push(doc.data());
       })
 
-      console.log('ALL PROJECTS',  allProjects)
+      // console.log('ALL PROJECTS',  allProjects)
       // SET PROJECTS TO  REDUX
       setAllProjects(allProjects);
     }).catch(err => {
@@ -35,8 +35,27 @@ function App() {
     })
   }
 
+  const getContactInfo = () => {
+    // fetch contact info
+    const contactInfo = [];
+    
+    // console.log('GET PROJECTS BELOW');
+    fetchContactInfo().then(res => {
+      res.forEach(doc => {
+        contactInfo.push(doc.data());
+      })
+
+      // console.log('Contact Info inAPPPPPP',  contactInfo)
+      // SET PROJECTS TO  REDUX
+      setContactInfo(...contactInfo)
+    }).catch(err => {
+      console.log('Error', err);
+    })
+  }
+
   useEffect(() => {
     getProjects();
+    getContactInfo();
   },[])
   return (
     <div className="App">

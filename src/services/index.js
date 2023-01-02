@@ -13,6 +13,17 @@ const fetchProjects = () => {
 }   
 
 
+const fetchContactInfo = () => {
+    try {
+        return getDocs(collection(db, 'contact-info'));
+    } catch (error) {
+        console.log("Error getting data");
+        console.log(error);
+    }
+}
+
+
 export {
-    fetchProjects
+    fetchProjects,
+    fetchContactInfo
 }

@@ -1,14 +1,25 @@
 import styles from './Landing.module.css';
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import NavContext from '../../context/NavContext';
 import 'animate.css'
+import { useSelector } from 'react-redux';
 
 const Landing = () => {
     const {navOpen, setNavOpen} = useContext(NavContext);
-    
+    const state = useSelector(state  => state.contact);
+    const [contact, setContact] = useState();
+
     useEffect(() => {
         setNavOpen(false);
-    }, [])
+    })
+
+    useEffect(() => {
+        console.log('IN Home', state)
+        // setContact(state.contactInfo);
+        // console.log('contact', contact)
+        setContact(state.contactInfo)
+    }, [state])
+    
     return (
         <>
            <div className={styles.content}>
