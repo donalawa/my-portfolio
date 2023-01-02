@@ -1,4 +1,5 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import moment from 'moment';
 import FolderParent from '../../components/FolderParent/FolderParent';
 import IconFolder from '../../components/IconFolder/IconFolder';
 import ContactItem from '../../components/ContactItem/ContactItem';
@@ -10,9 +11,26 @@ import NavContext from '../../context/NavContext';
 
 function Contact(props) {
     const {navOpen, setNavOpen} = useContext(NavContext);
-    
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+    const [date, setDate] = useState('');
+
+    const sendMessage = () => {
+        let data = {
+            name: name,
+            email: email,
+            message: message,
+            date: date
+        }
+        // CALL BACKEND SEVEICE AND SEND DATA AND SHOW  THANKS PAGE
+        console.log(data);
+    }
     useEffect(() => {
         setNavOpen(false);
+        let ourdate = moment().format("MMM Do YY");
+        setDate(ourdate)
+        // Get  date  withmoment and  update date state
     }, [])
     
     return (
@@ -45,10 +63,10 @@ function Contact(props) {
                
                 <div className="main-contact">
                     <div className="contact-left">
-                        <TextInput placeholder="Enter name" label="_name:" />
-                        <TextInput placeholder="Enter email" label="_email:"/>
-                        <MessageBox />
-                        <Button text="submit-message"/>
+                        <TextInput placeholder="Enter name" value={name} inputChange={(e) => setName(e.target.value)} label="_name:" />
+                        <TextInput placeholder="Enter email" value={email}  label="_email:" inputChange={(e) => setEmail(e.target.value)}/>
+                        <MessageBox value={message} inputChange={(e) => setMessage(e.target.value)}/>
+                        <Button text="submit-message" onClick={sendMessage}/>
                     </div>
                     <div className="contact-right">
                         <p>
@@ -71,26 +89,26 @@ function Contact(props) {
                         <p>
                             <span className="line-number">4 </span>
                             <span className="var-name">&nbsp;name<span className="brace">: </span></span>
-                            <span className="value">"Awa Donacien"</span>
+                            <span className="value">"{name}"</span>
                             <span className="brace">,</span>
                         </p>
                         <p>
                             <span className="line-number">5 </span>
                             <span className="var-name">&nbsp;email<span className="brace">: </span></span>
-                            <span className="value">"awadonalcien12@gmail.com"</span>
+                            <span className="value">"{email}"</span>
                             <span className="brace">,</span>
                         </p>
                         <p>
                             <span className="line-number">6 </span>
                             <span className="var-name">&nbsp;message<span className="brace">: </span></span>
-                            <span className="value">"Hey! Just checked your website and it looks awesome! Also, I checked your articled on Medium."</span>
+                            <span className="value">"{message}"</span>
                             <span className="brace">,</span>
                         </p>
 
                         <p>
                             <span className="line-number">7 </span>
                             <span className="var-name">&nbsp;date<span className="brace">: </span></span>
-                            <span className="value">"Tue 26 Dec"</span>
+                            <span className="value">"{date}"</span>
                             <span className="brace">,</span>
                         </p>
                         <p>
