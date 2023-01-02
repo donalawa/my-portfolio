@@ -33,7 +33,7 @@ function IconFolder({icon, text, files, open=false}) {
                 <div className="folder-file-info" key={index} onClick={() => makeFileActive(file)}>
                     <div>&nbsp;</div>
                     <img style={{height: '12px', width: '13px'}} src={require('../../images/icons/file.png')} />
-                    <p  className="folder-file-name">{file.name}</p>
+                    <p  className="folder-file-name">{file.name}.txt</p>
                 </div>
                ))}
 
