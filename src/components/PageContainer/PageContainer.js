@@ -10,14 +10,14 @@ function PageContainer({ children, name }) {
     return (
         <div>
             <div className="main-content">
-                <div className="top">
+                <div>
                     <Footer />
                     <MobileNav />
                     <div className="main-info">
                         { children }
                     </div>
                 </div>
-                <div className="bottom">
+                <div>
                     <Navbar pageName={name}/>
                 </div>
             </div>
