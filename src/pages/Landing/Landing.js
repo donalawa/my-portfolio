@@ -11,7 +11,7 @@ const Landing = () => {
 
     useEffect(() => {
         setNavOpen(false);
-    })
+    },[]);
 
     useEffect(() => {
         console.log('IN Home', state)

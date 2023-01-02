@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import moment from 'moment';
 import FolderParent from '../../components/FolderParent/FolderParent';
 import IconFolder from '../../components/IconFolder/IconFolder';
@@ -16,6 +17,9 @@ function Contact(props) {
     const [message, setMessage] = useState('')
     const [date, setDate] = useState('');
 
+    const state = useSelector(state  => state.contact);
+    const [contact, setContact] = useState();
+
     const sendMessage = () => {
         let data = {
             name: name,
@@ -26,12 +30,20 @@ function Contact(props) {
         // CALL BACKEND SEVEICE AND SEND DATA AND SHOW  THANKS PAGE
         console.log(data);
     }
+
     useEffect(() => {
         setNavOpen(false);
         let ourdate = moment().format("MMM Do YY");
         setDate(ourdate)
         // Get  date  withmoment and  update date state
     }, [])
+
+    useEffect(() => {
+        console.log('IN Contact', state)
+        // setContact(state.contactInfo);
+        // console.log('contact', contact)
+        setContact(state.contactInfo)
+    }, [state])
     
     return (
         <div className="about-container">
@@ -43,13 +55,13 @@ function Contact(props) {
             </div>
             <div className="    width: 100%;">
                 <FolderParent text="contact-me" open={true}>
-                    <ContactItem type="email" text="awadonacien12@gmail.com"/>
-                    <ContactItem type="phone" text="+237 651346786"/>
+                    <ContactItem type="email" value={contact?.email} text={contact?.email}/>
+                    <ContactItem type="phone" value="#" text={contact?.phone}/>
                 </FolderParent>
                 <FolderParent text="find-me-also-in" open={true}>
-                    <ContactItem type="link" text="Github"/>
-                    <ContactItem type="link" text="Twitter"/>
-                    <ContactItem type="link" text="LinkedIn"/>
+                    <ContactItem type="link" value={contact?.social?.github} text="Github"/>
+                    <ContactItem type="link" value={contact?.social?.twitter} text="Twitter"/>
+                    <ContactItem type="link" value={contact?.social?.linkedin} text="LinkedIn"/>
                 </FolderParent>
             </div>
             <div className="main-sec">
