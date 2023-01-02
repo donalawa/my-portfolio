@@ -3,6 +3,8 @@ import FolderParent from '../../components/FolderParent/FolderParent';
 import IconFolder from '../../components/IconFolder/IconFolder';
 import ContactItem from '../../components/ContactItem/ContactItem';
 import TextInput from '../../components/TextInput/TextInput';
+import MessageBox from '../../components/MessageBox/MessageBox';
+import Button from '../../components/Button/Button';
 import './Contact.css'
 
 function Contact(props) {
@@ -14,12 +16,12 @@ function Contact(props) {
                 <img style={{ width: '16px'}} src={require('../../images/icons/side-icon2.png')}/>
                 <img style={{ width: '16px'}} src={require('../../images/icons/side-icon3.png')}/>
             </div>
-            <div className="folders-bar">
-                <FolderParent text="personal-info" open={true}>
+            <div className="    width: 100%;">
+                <FolderParent text="contact-me" open={true}>
                     <ContactItem type="email" text="awadonacien12@gmail.com"/>
                     <ContactItem type="phone" text="+237 651346786"/>
                 </FolderParent>
-                <FolderParent text="professional-info" open={true}>
+                <FolderParent text="find-me-also-in" open={true}>
                     <ContactItem type="link" text="Github"/>
                     <ContactItem type="link" text="Twitter"/>
                     <ContactItem type="link" text="LinkedIn"/>
@@ -29,7 +31,7 @@ function Contact(props) {
                 {/* Main sec */}
                 <div  className="main-top-bar">
                     <div className="file-container">
-                        <p className='file-name'>personal-info</p>
+                        <p className='file-name'> contact-me</p>
                         <img style={{ width: '10px',  height:  '10px'}} src={require('../../images/icons/close.png')}/>
                     </div>
                 </div>
@@ -38,6 +40,8 @@ function Contact(props) {
                     <div className="contact-left">
                         <TextInput placeholder="Enter name" label="_name:" />
                         <TextInput placeholder="Enter email" label="_email:"/>
+                        <MessageBox />
+                        <Button text="submit-message"/>
                     </div>
                     <div className="contact-right">
                         <p>

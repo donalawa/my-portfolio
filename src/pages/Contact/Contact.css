@@ -20,6 +20,7 @@
 
 .folders-bar {
     border-left: 1px solid var(--border-color);
+
 }
 
 .main-sec {
@@ -139,7 +140,9 @@
 
 .contact-left {
     /* background-color: rebeccapurple; */
-    padding: 60px 40px;
+    padding: 40px 40px;
+    border-right: 1px solid #1E2D3D;
+    height: 100%;
 }
 
 .contact-right {
@@ -173,6 +176,12 @@
 
 
 /* MEDIA QUERIES */
+
+@media screen and (max-width: 1138px) {
+    .main-contact {
+        grid-template-columns: 1fr;
+    }
+}
 
 @media screen and (max-width: 942px) {
     .sm-bar, .sm-right {

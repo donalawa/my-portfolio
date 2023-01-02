@@ -8,7 +8,7 @@
     justify-content: space-between;
     border:2px solid #1E2D3D;
     box-sizing: border-box;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     padding: 10px 0px;
     
   }
@@ -17,3 +17,11 @@
     padding-top: 30px;
   }
   
+
+  @media screen and (min-width: 603px) {
+    .main-content {
+      width: 100vw;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+  }

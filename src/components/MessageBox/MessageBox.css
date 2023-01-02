@@ -1,0 +1,18 @@
+
+
+.message-box {
+    background: #1E1E1E;
+    border-radius: 8px;
+    padding: 10px;
+    resize: none;
+    color: #465E77;
+    width: 100%;
+    outline: none;
+    border: 1px solid #1E2D3D;
+}
+
+.message-box:focus {
+    outline-width: 1px;
+    outline-style: dashed;
+    outline-color: #607B96;
+}

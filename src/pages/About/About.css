@@ -17,6 +17,10 @@
     gap: 20px;
 }
 
+.file-content {
+    padding: 10px;
+}
+
 
 .folders-bar {
     border-left: 1px solid var(--border-color);

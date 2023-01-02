@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+.submit-button {
+    padding: 10px 14px;
+    gap: 10px;
+    width: 146px;
+    height: 38px;
+    background: #1C2B3A;
+    border-radius: 8px;
+    color: #fff;
+    border: 0px transparent;
+    margin-top: 20px;
+    font-family: 'Fira Code', monospace;;
+}
