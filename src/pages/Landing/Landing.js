@@ -24,7 +24,7 @@ const Landing = () => {
                             <span style={{color: '#4D5BCE'}}>const</span>
                             <span style={{color: '#43D9AD'}}>githubLink</span>
                             <span style={{color: '#fff'}}>=</span>
-                            <span style={{color: '#C98BDF'}}>“https://github.com/example/url”</span>
+                            <span style={{color: '#C98BDF'}}>“https://github.com/donalawa”</span>
                         </a>
                     </div>
                     <div className={styles.right}>
