@@ -1,6 +1,7 @@
 import styles from './Landing.module.css';
 import { useContext, useEffect } from 'react';
 import NavContext from '../../context/NavContext';
+import 'animate.css'
 
 const Landing = () => {
     const {navOpen, setNavOpen} = useContext(NavContext);
@@ -11,20 +12,20 @@ const Landing = () => {
     return (
         <>
            <div className={styles.content}>
-                <h1 className={styles.title}>Hi Friend!</h1>
+                <h1 className={`${styles.title} animate__animated animate__tada`}>Hi Friend!</h1>
                 <div className={styles.homeMain}>
                     <div className={styles.left}>
-                        <p className={styles.hiText}>I am</p>
-                        <h1 className={styles.name}>Awa Donacien()</h1>
+                        <p className={`${styles.hiText} animate__animated animate__swing`}>I am</p>
+                        <h1 className={`${styles.name} animate__animated animate__fadeInLeft`}>Awa Donacien()</h1>
                         <p className={styles.infoTitle}>Full-Stack Web and Mobile developer </p>
                         <p className={styles.infoComment}>// complete the challange to see my fav code snippet</p>
                         <p className={styles.infoComment}>// Have fun()</p>
-                        <div className={styles.varLink}>
+                        <a href="#"  target="_blank" className={`${styles.varLink} animate__animated animate__heartBeat`}>
                             <span style={{color: '#4D5BCE'}}>const</span>
                             <span style={{color: '#43D9AD'}}>githubLink</span>
                             <span style={{color: '#fff'}}>=</span>
                             <span style={{color: '#C98BDF'}}>“https://github.com/example/url”</span>
-                        </div>
+                        </a>
                     </div>
                     <div className={styles.right}>
                         <div className={styles.bgImage}>

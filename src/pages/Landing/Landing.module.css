@@ -63,10 +63,14 @@
 
 }
 
+.varLink {
+    text-decoration: none;
+}
+
+
 .left .varLink span {
     margin-right: 10px;
     font-family: 'Fira Code', monospace;
-
 }
 
 
