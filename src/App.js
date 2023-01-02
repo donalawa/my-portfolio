@@ -3,12 +3,41 @@ import './App.css';
 import { BrowserRouter, Routes,  Route } from 'react-router-dom';
 import { Landing, About, Projects, Contact } from './pages/index';
 import PageContainer from './components/PageContainer/PageContainer';
-import { useState } from  'react';
+import { useState, useEffect } from  'react';
 import NavContext from './context/NavContext';
+
+import { useSelector, useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { actionCreators } from './state';
+
+import { fetchProjects } from './services';
 
 function App() {
   const [navOpen, setNavOpen] = useState(false);
+  const dispatch = useDispatch();
 
+  let  { setAllProjects } = bindActionCreators(actionCreators, dispatch);
+
+  const getProjects = () => {
+    const allProjects = [];
+    
+    console.log('GET PROJECTS BELOW');
+    fetchProjects().then(res => {
+      res.forEach(doc => {
+        allProjects.push(doc.data());
+      })
+
+      console.log('ALL PROJECTS',  allProjects)
+      // SET PROJECTS TO  REDUX
+      setAllProjects(allProjects);
+    }).catch(err => {
+      console.log('Error', err);
+    })
+  }
+
+  useEffect(() => {
+    getProjects();
+  },[])
   return (
     <div className="App">
       <BrowserRouter>

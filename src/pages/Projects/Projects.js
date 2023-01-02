@@ -1,17 +1,26 @@
-import React, {useEffect, useContext} from 'react';
+import React, {useEffect, useContext,  useState} from 'react';
 import FolderParent from '../../components/FolderParent/FolderParent';
 import IconFolder from '../../components/IconFolder/IconFolder';
 import LanguageIcon from '../../components/LanguageIcon/LanguageIcon';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import './Projects.css'
 import NavContext from '../../context/NavContext';
+import { useSelector, useDispatch } from 'react-redux';
 
 function Projects(props) {
     const {navOpen, setNavOpen} = useContext(NavContext);
-    
+    const state = useSelector(state => state);
+    const [projects, setProjects]  = useState([]);
+
     useEffect(() => {
         setNavOpen(false);
     }, [])
+
+    useEffect(() => {
+        console.log('all projects')
+        console.log(state);
+        setProjects(state.projects.allProjects);
+    }, [state])
     return (
         <div className="about-container">
             <div className="sm-bar">
@@ -40,9 +49,10 @@ function Projects(props) {
                     </div>
                 </div>
                <div className="project-cards">
-                    <ProjectCard iconBg="#86E1F9" icon={require('../../images/projects/react-i.png')} image={require('../../images/projects/p1.png')}/>
+                    {/* <ProjectCard iconBg="#86E1F9" icon={require('../../images/projects/react-i.png')} image={require('../../images/projects/p1.png')}/>
                     <ProjectCard iconBg="#81D4AF" icon={require('../../images/projects/vue-i.png')} image={require('../../images/projects/p2.png')}/>
-                    <ProjectCard iconBg="#86E1F9" icon={require('../../images/projects/react-i.png')} image={require('../../images/projects/p3.png')}/>
+                    <ProjectCard iconBg="#86E1F9" icon={require('../../images/projects/react-i.png')} image={require('../../images/projects/p3.png')}/> */}
+                    {projects.map((project, index) => <ProjectCard iconBg="#86E1F9" data={project} key={index} icon={require('../../images/projects/react-i.png')} image={require('../../images/projects/p3.png')}/>)}
                </div>
       
             </div>
