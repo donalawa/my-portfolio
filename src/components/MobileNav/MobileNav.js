@@ -37,22 +37,22 @@ function MobileNav(props) {
                 </button>
             </div>
             <div className="mobile-nav-content">
-                <Link to="/">
+                <Link to="/" style={{textDecoration: 'none'}}>
                 <div className="mobile-link">
                     <span className="link">_hello</span>
                 </div>
                 </Link>
-                <Link to="/about">
+                <Link to="/about" style={{textDecoration: 'none'}}>
                 <div className="mobile-link">
                     <span className="link">_about-me</span>
                 </div>
                 </Link>
-                <Link to="/projects">
+                <Link to="/projects" style={{textDecoration: 'none'}}>
                 <div className="mobile-link">
                     <span className="link">_projects</span>
                 </div>
                 </Link>
-                <Link to="/contact">
+                <Link to="/contact" style={{textDecoration: 'none'}}>
                 <div className="mobile-link">
                     <span className="link">_contact-me</span>
                 </div>
@@ -61,12 +61,12 @@ function MobileNav(props) {
                     <p className="social-link">Social: </p>
                     <div  className="mobile-nav-icons">
                         <div className="mobile-nav-icon">
-                        <a href={contact?.social?.twitter} target="_blank">
+                        <a href={contact?.social?.twitter}  target="_blank">
                             <FaTwitter size={20} color="#607B96"/>
                         </a>
                         </div>
                         <div className="mobile-nav-icon">
-                         <a href={contact?.social?.github} target="_blank">
+                         <a href={contact?.social?.github}  target="_blank">
                                 <AiFillGithub size={20} color="#607B96" />
                             </a>
                         </div>
