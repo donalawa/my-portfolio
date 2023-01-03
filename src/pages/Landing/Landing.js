@@ -37,6 +37,8 @@ const Landing = () => {
                             <span style={{color: '#fff'}}>=</span>
                             <a href="https://github.com/donalawa" target="_blank" style={{color: '#C98BDF',  fontSize:  '19px',  textDecoration: 'none'}}>“https://github.com/donalawa”</a>
                         </a>
+                        <br />
+                        <button className={`${styles.cvButton} animate__animated animate__swing`}>Download My Cv</button>
                     </div>
                     <div className={styles.right}>
                         <div className={styles.bgImage}>

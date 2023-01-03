@@ -56,7 +56,7 @@
 }
 
 .left .infoComment {
-    color: #607B96;
+    color: #606569;
     font-size: 16px;
     margin-bottom: 10px;
     font-family: 'Fira Code', monospace;
@@ -73,7 +73,14 @@
     font-family: 'Fira Code', monospace;
 }
 
-
+.cvButton {
+    padding: 10px 7px;
+    margin-top: 20px;
+    color: #fff;
+    font-family: 'Fira Code', monospace;
+    background-color: #4D5BCE;
+    border: none;
+}
 .homeMain .right {
     /* background-color: orange; */
     flex: 1;
