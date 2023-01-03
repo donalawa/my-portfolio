@@ -52,7 +52,7 @@ function Projects(props) {
                     {/* <ProjectCard iconBg="#86E1F9" icon={require('../../images/projects/react-i.png')} image={require('../../images/projects/p1.png')}/>
                     <ProjectCard iconBg="#81D4AF" icon={require('../../images/projects/vue-i.png')} image={require('../../images/projects/p2.png')}/>
                     <ProjectCard iconBg="#86E1F9" icon={require('../../images/projects/react-i.png')} image={require('../../images/projects/p3.png')}/> */}
-                    {projects.map((project, index) => <ProjectCard iconBg="#86E1F9" data={project} key={index} icon={require('../../images/projects/react-i.png')} image={require('../../images/projects/p3.png')}/>)}
+                    {projects.map((project, index) => <ProjectCard iconBg={project.frontEndFramework == 'ReactJs' ? "#86E1F9" : "#81D4AF" } data={project} key={index} icon={project.frontEndFramework == 'ReactJs' ?  require('../../images/projects/react-i.png') : require('../../images/projects/vue-i.png')} image={require('../../images/projects/p3.png')}/>)}
                </div>
       
             </div>
