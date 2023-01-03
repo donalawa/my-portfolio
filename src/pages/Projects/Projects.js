@@ -44,7 +44,7 @@ function Projects(props) {
                 {/* Main sec */}
                 <div  className="main-top-bar">
                     <div className="file-container">
-                        <p className='file-name'>React; Angular</p>
+                        <p className='file-name'>projects</p>
                         <img style={{ width: '10px',  height:  '10px'}} src={require('../../images/icons/close.png')}/>
                     </div>
                 </div>

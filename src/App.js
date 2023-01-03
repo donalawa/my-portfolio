@@ -14,6 +14,8 @@ import { fetchProjects, fetchContactInfo, fetchAboutInfo} from './services';
 
 import HashLoader from "react-spinners/HashLoader";
 
+import AnimatedCursor from "react-animated-cursor"
+
 function App() {
   const [navOpen, setNavOpen] = useState(false);
   const dispatch = useDispatch();
@@ -93,6 +95,27 @@ function App() {
   },[])
   return (
     <div className="App">
+    <AnimatedCursor
+      innerSize={8}
+      outerSize={18}
+      color='84, 102, 232'
+      outerAlpha={0.2}
+      innerScale={0.7}
+      outerScale={5}
+      clickables={[
+        'a',
+        'input[type="text"]',
+        'input[type="email"]',
+        'input[type="number"]',
+        'input[type="submit"]',
+        'input[type="image"]',
+        'label[for]',
+        'select',
+        'textarea',
+        'button',
+        '.link'
+      ]}
+    />
     {loading &&  <HashLoader
         color="#4D5BCE"
         loading={true}
