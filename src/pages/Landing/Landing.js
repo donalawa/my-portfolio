@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from 'react';
 import NavContext from '../../context/NavContext';
 import 'animate.css'
 import { useSelector } from 'react-redux';
+import Board from '../../components/chess/Board';
 
 const Landing = () => {
     const {navOpen, setNavOpen} = useContext(NavContext);
@@ -29,7 +30,8 @@ const Landing = () => {
                         <p className={`${styles.hiText} animate__animated animate__swing`}>I am</p>
                         <h1 className={`${styles.name} animate__animated animate__fadeInLeft`}>Awa Donacien()</h1>
                         <p className={styles.infoTitle}>Full-Stack Web and Mobile developer </p>
-                        <p className={styles.infoComment}>// complete the challange to see my fav code snippet</p>
+                        <p className={styles.infoComment}>// I am a creative and passionate developer</p>
+                        <p className={styles.infoComment}>// I love working with different technologies</p>
                         <p className={styles.infoComment}>// Have fun()</p>
                         <a href="#"  target="_blank" className={`${styles.varLink} animate__animated animate__heartBeat`}>
                             <span style={{color: '#4D5BCE'}}>const</span>
@@ -41,10 +43,11 @@ const Landing = () => {
                         <button className={`${styles.cvButton} animate__animated animate__swing`}>Download My Cv</button>
                     </div>
                     <div className={styles.right}>
-                        <div className={styles.bgImage}>
+                    <Board />
+                        {/* <div className={styles.bgImage}>
                             
-                        </div>
-                        <div className={styles.gameContainer}>
+                        </div> */}
+                        {/* <div className={styles.gameContainer}>
                             <div className={styles.top}>
                                 <span>x</span>
                                 <span>x</span>
@@ -56,6 +59,7 @@ const Landing = () => {
                                     <button className={styles.buttonStart}>start-game</button>
                                     <button className={styles.buttonSkip}>Skip</button>
                                 </div>
+                               
                                 <div className={styles.gameInfo}>
                                     <div className={styles.gameInfoLeft}>
                                         <p className={styles.gameInfoComment}>// Your almost done</p>
@@ -101,7 +105,8 @@ const Landing = () => {
                                 <span>x</span>
                             </div>
                         </div>
-                        <p className={styles.bottomComment}>// i am a creative and passionate developer</p>
+                         */}
+                        <p className={styles.bottomComment}>// i enjoy playing chess during my free hours</p>
                     </div>
                 </div>
            </div>

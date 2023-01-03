@@ -80,6 +80,7 @@
     font-family: 'Fira Code', monospace;
     background-color: #4D5BCE;
     border: none;
+    cursor: pointer;
 }
 .homeMain .right {
     /* background-color: orange; */
