@@ -53,7 +53,7 @@ function About(props) {
                 <FolderParent text="professional-info" open={true}>
                     {aboutInfo?.map((info,index) => <IconFolder open={true} key={index} icon={require('../../images/icons/folder1.png')} text={info?.folderName} files={info?.files}/>)}
                 </FolderParent>
-                <FolderParent text="hobbies">
+                <FolderParent text="hobbies" open={true}>
                 {hobbies?.map((data,index) => <IconFolder open={true} key={index} icon={require('../../images/icons/folder2.png')} text={data?.folderName} files={data?.files}/>)}
                 </FolderParent>
                 <FolderParent text="contacts" open={true}>

@@ -106,7 +106,7 @@ const Landing = () => {
                             </div>
                         </div>
                          */}
-                        <p className={styles.bottomComment}>// i enjoy playing chess during my free hours</p>
+                        <p className={styles.bottomComment}>// i enjoy playing chess during my free time</p>
                     </div>
                 </div>
            </div>

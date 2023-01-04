@@ -7,9 +7,9 @@
 }
 
 .black-tile {
-    background-color: #4D5BCE;
+    background-color: var(--primary);
 }
 
 .white-tile {
-    background-color: #f8f8ef;
+    background-color: #fff;
 }
