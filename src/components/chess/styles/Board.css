@@ -3,7 +3,7 @@
 .board {
     width: 600px;
     height: 600px;
-    background-color: #779556;
+    /* background-color: #779556; */
     display: grid;
     grid-template-columns: repeat(8, 75px);
 }

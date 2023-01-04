@@ -81,6 +81,12 @@
     background-color: #4D5BCE;
     border: none;
     cursor: pointer;
+    
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
 }
 .homeMain .right {
     /* background-color: orange; */

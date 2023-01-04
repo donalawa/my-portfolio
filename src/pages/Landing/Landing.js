@@ -40,7 +40,7 @@ const Landing = () => {
                             <a href="https://github.com/donalawa" target="_blank" style={{color: '#C98BDF',  fontSize:  '19px',  textDecoration: 'none'}}>“https://github.com/donalawa”</a>
                         </a>
                         <br />
-                        <button className={`${styles.cvButton} animate__animated animate__swing`}>Download My Cv</button>
+                        <button className={`${styles.cvButton} animate__animated animate__swing`}><a href="https://docs.google.com/document/d/1MCK2jI02Vy2uO8nlBQjgVPmCG-JRFt50BB4rOOME3Mg/edit?usp=sharing" className={styles.link} target="_blank">Download My Cv</a></button>
                     </div>
                     <div className={styles.right}>
                     <Board />
