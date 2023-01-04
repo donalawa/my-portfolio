@@ -1,4 +1,4 @@
-import { collection, collectionGroup, doc, DocumentData, getDoc, getDocs, query, QuerySnapshot, where } from 'firebase/firestore';
+import { collection, collectionGroup, doc, DocumentData, addDoc, getDocs, setDoc, QuerySnapshot, where } from 'firebase/firestore';
 
 import { db } from "../firebase/firebase-config";
 
@@ -31,9 +31,16 @@ const fetchAboutInfo = () => {
     }
 }
 
+const addContactInfo = (data) => {
+    let docRef = doc(collection(db, "contacts"));
+    
+    return setDoc(docRef, data)
+}
+
 
 export {
     fetchProjects,
     fetchContactInfo,
-    fetchAboutInfo
+    fetchAboutInfo,
+    addContactInfo
 }

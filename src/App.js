@@ -16,6 +16,9 @@ import HashLoader from "react-spinners/HashLoader";
 
 import AnimatedCursor from "react-animated-cursor"
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
   const [navOpen, setNavOpen] = useState(false);
   const dispatch = useDispatch();
@@ -132,6 +135,7 @@ function App() {
             <Route path="/projects" element={(<NavContext.Provider value={{navOpen, setNavOpen}}> <PageContainer name="projects"><Projects /> </PageContainer></NavContext.Provider>)}/>
           </Routes>
       </BrowserRouter>}
+      <ToastContainer />
     </div>
   );
 }

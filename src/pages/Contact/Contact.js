@@ -9,6 +9,9 @@ import MessageBox from '../../components/MessageBox/MessageBox';
 import Button from '../../components/Button/Button';
 import './Contact.css'
 import NavContext from '../../context/NavContext';
+import { addContactInfo } from '../../services';
+
+import { ToastContainer, toast } from 'react-toastify';
 
 function Contact(props) {
     const {navOpen, setNavOpen} = useContext(NavContext);
@@ -16,6 +19,7 @@ function Contact(props) {
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
     const [date, setDate] = useState('');
+    const [sending, setSending] = useState(false);
 
     const state = useSelector(state  => state.contact);
     const [contact, setContact] = useState();
@@ -27,8 +31,24 @@ function Contact(props) {
             message: message,
             date: date
         }
+
         // CALL BACKEND SEVEICE AND SEND DATA AND SHOW  THANKS PAGE
-        console.log(data);
+        // console.log(data);
+        setSending(true);
+        addContactInfo(data).then(res => {
+            // console.log('GOOD');
+            setName('');
+            setEmail('');
+            setMessage('');
+            setSending(false);
+            toast.success("Submitted Successfuly", {
+                pauseOnHover: false,
+                closeOnClick: true,
+              })
+        }).catch(err => {
+            console.log('ERROR');
+            console.log(err);
+        })
     }
 
     useEffect(() => {
@@ -78,7 +98,9 @@ function Contact(props) {
                         <TextInput placeholder="Enter name" value={name} inputChange={(e) => setName(e.target.value)} label="_name:" />
                         <TextInput placeholder="Enter email" value={email}  label="_email:" inputChange={(e) => setEmail(e.target.value)}/>
                         <MessageBox value={message} inputChange={(e) => setMessage(e.target.value)}/>
-                        <Button text="submit-message" onClick={sendMessage}/>
+                       {!sending && <Button text="submit-message" onClick={sendMessage}/>}
+                        {sending && <p style={{color: '#fff'}}>Sending...</p>}
+
                     </div>
                     <div className="contact-right">
                         <p>
